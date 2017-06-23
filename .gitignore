@@ -1,3 +1,5 @@
 node_modules/
 results/
 config.json
+*.js
+*.js.map

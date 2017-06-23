@@ -6,6 +6,13 @@ Longpoll the API and log responses to disk
 
 ```
 npm install
+npm run buildOnce
+```
+
+for continous builds use
+
+```
+npm run build
 ```
 
 ## Configuration
@@ -26,5 +33,5 @@ Create a config.json according to following scheme:
 ## Run
 
 ```
-npm run start <duration>
+npm run start <duration in seconds>
 ```

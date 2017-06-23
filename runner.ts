@@ -1,10 +1,11 @@
-const { writeFile } = require("fs")
-const { map } = require("bluebird")
+import { writeFile } from "fs"
+import { map } from "bluebird"
+import { get } from "get"
 const { host, port = 80, paths, resultsFolder } = require("config.json")
 
 const base = host + ":" + port
-const urls = paths.map(s => base + s)
-const duration = process.argv[2] || 0
+const urls = paths.map((s : string) => base + s)
+const duration = parseInt(process.argv[2])/1000 || 0
 
 const start = Date.now()
 const end = start + duration
