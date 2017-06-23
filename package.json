@@ -1,0 +1,13 @@
+{
+  "name": "ergometer-drain",
+  "version": "1.0.0",
+  "description": "Longpoll the API and log responses to disk",
+  "main": "runner.js",
+  "scripts": {
+  },
+  "author": "github.com/ltetzlaff",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0"
+  }
+}
