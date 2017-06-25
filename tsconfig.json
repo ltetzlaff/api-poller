@@ -3,8 +3,10 @@
     "compilerOptions": {
         "module": "none",
         "sourceMap": true,
-        "lib": ["es7", "esnext.asynciterable"],
         "target": "es6",
+        "declaration": true,
+        "outDir": "./dist",
+        "strict": true,
         "noImplicitAny": true,
         "suppressImplicitAnyIndexErrors": true
     },

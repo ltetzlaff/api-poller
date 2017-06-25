@@ -1,19 +1,22 @@
 {
-  "name": "ergometer-drain",
+  "name": "api-poller",
   "version": "1.0.0",
   "description": "Longpoll the API and log responses to disk",
-  "main": "runner.js",
+  "main": "dist/runner.js",
+  "types": "dist/runner.d.ts",
   "scripts": {
+    "prepublish": "npm run buildOnce",
     "build": "tsc --watch || true",
     "buildOnce": "tsc || true",
     "start": "node runner.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ltetzlaff/ergometer-test.git"
+    "url": "https://github.com/ltetzlaff/api-poller.git"
   },
+  "bugs": "https://github.com/ltetzlaff/api-poller/issues",
   "author": "github.com/ltetzlaff",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^8.0.2",

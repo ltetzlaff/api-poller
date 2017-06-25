@@ -3,3 +3,4 @@ results/
 config.json
 *.js
 *.js.map
+*.d.ts
