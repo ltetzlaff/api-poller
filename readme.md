@@ -1,6 +1,6 @@
-# Ergometer Drain
+# API Poller
 
-Longpoll the API and log responses to disk
+Longpoll an API and log responses to disk
 
 ## Setup
 
