@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 import { writeFile, readFileSync } from "fs"
-import { get } from "get"
+import { get } from "./get"
 const { host, port = 80, paths, resultsFolder } = JSON.parse(readFileSync(process.argv[2], { encoding: "utf8" }))
 
 const base = host + ":" + port
