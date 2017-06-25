@@ -1,6 +1,6 @@
 import { writeFile } from "fs"
 import { get } from "get"
-const { host, port = 80, paths, resultsFolder } = require("config.json")
+const { host, port = 80, paths, resultsFolder } = require("../config.json")
 
 const base = host + ":" + port
 const duration = parseInt(process.argv[2])/1000 || 0
