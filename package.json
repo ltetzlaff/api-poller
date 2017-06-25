@@ -1,13 +1,13 @@
 {
   "name": "api-poller",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Longpoll the API and log responses to disk",
   "main": "dist/runner.js",
   "types": "dist/runner.d.ts",
   "scripts": {
     "prepublish": "npm run buildOnce",
     "build": "tsc --watch || true",
-    "buildOnce": "tsc || true",
+    "buildOnce": "tsc",
     "start": "node runner.js"
   },
   "repository": {

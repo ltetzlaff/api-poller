@@ -33,5 +33,5 @@ Create a config.json according to following scheme:
 ## Run
 
 ```
-npm run start <duration in seconds>
+npm run start <path to config.json> <duration in seconds>
 ```
