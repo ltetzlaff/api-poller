@@ -2,7 +2,6 @@
     "compileOnSave": true,
     "compilerOptions": {
         "module": "none",
-        "sourceMap": true,
         "target": "es6",
         "declaration": true,
         "outDir": "./dist",
