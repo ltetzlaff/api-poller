@@ -1,5 +1,4 @@
 import { writeFile } from "fs"
-import { map } from "bluebird"
 import { get } from "get"
 const { host, port = 80, paths, resultsFolder } = require("config.json")
 
