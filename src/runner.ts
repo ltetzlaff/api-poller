@@ -20,7 +20,7 @@ const run = async () => {
       const contents = await get(url)
       console.log(contents)
       const fileName = resultsFolder + Date.now() + "_" + path + ".json"
-      writeFile(fileName, contents, "utf8", () => {})
+      writeFile(fileName, contents, { encoding: "utf8" }, () => {})
       if (Date.now() < end) handler()
     }
 
