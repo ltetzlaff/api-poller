@@ -1,6 +1,6 @@
 {
   "name": "api-poller",
-  "version": "1.5.1",
+  "version": "2.0.0",
   "description": "Longpoll the API and log responses to disk",
   "main": "dist/runner",
   "types": "dist/runner",
