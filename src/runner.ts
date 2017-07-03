@@ -5,7 +5,7 @@ import { get } from "./get"
 const { host, port = 80, paths, resultsFolder } = JSON.parse(readFileSync(process.argv[2], { encoding: "utf8" }))
 
 const base = host + ":" + port
-const duration = parseInt(process.argv[3])/1000 || 0
+const duration = parseInt(process.argv[3])* 1000 || 0
 
 const start = Date.now()
 const end = start + duration
@@ -19,7 +19,7 @@ const run = async () => {
       
       const contents = await get(url)
       console.log(contents)
-      const fileName = resultsFolder + Date.now() + "_" + path + ".json"
+      const fileName = resultsFolder + Date.now() + "_" + path.replace("/", "") + ".json"
       writeFile(fileName, contents, { encoding: "utf8" }, () => {})
       if (Date.now() < end) handler()
     }
