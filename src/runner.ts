@@ -2,6 +2,7 @@
 
 import { writeFile, readFileSync } from "fs"
 import { get } from "./get"
+import { join } from "path"
 const { host, port = 80, paths, resultsFolder } = JSON.parse(readFileSync(process.argv[2], { encoding: "utf8" }))
 
 const base = host + ":" + port
@@ -19,8 +20,8 @@ const run = async () => {
       
       const contents = await get(url)
       console.log(contents)
-      const fileName = resultsFolder + Date.now() + "_" + path.replace("/", "") + ".json"
-      writeFile(fileName, contents, { encoding: "utf8" }, () => {})
+      const fileName = join(resultsFolder, Date.now() + "_" + path.replace(/(\\|\/|\?|#|\(|\))/g, "") + ".json")
+      writeFile(fileName, contents, { encoding: "utf8" }, err => console.error("error writing", fileName))
       if (Date.now() < end) handler()
     }
 
